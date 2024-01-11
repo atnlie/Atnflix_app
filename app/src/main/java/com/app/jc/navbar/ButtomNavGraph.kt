@@ -1,17 +1,15 @@
-package com.app.jc.navigation
+package com.app.jc.navbar
 
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.app.jc.navbar.BottomNavBarScreen
-import com.app.jc.screens.HomeScreen
-import com.app.jc.screens.SearchScreen
-import com.app.jc.screens.UpcomingScreen
+import com.app.jc.pages.HomeScreen
+import com.app.jc.pages.SearchScreen
+import com.app.jc.pages.UpcomingScreen
 
 @Composable
 fun BottomNavGraph(navController: NavHostController, pv: PaddingValues) {

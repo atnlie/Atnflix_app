@@ -9,16 +9,10 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.navigation.compose.NavHost
-import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import com.app.jc.navbar.BottomNavBarScreen
 import com.app.jc.navbar.BottomNavigationBar
-import com.app.jc.navigation.BottomNavGraph
-import com.app.jc.screens.HomeScreen
-import com.app.jc.screens.SearchScreen
-import com.app.jc.screens.UpcomingScreen
+import com.app.jc.navbar.BottomNavGraph
 
 @Preview
 @Composable

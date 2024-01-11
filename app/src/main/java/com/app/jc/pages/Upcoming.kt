@@ -1,4 +1,4 @@
-package com.app.jc.screens
+package com.app.jc.pages
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -13,14 +13,14 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 
 @Composable
-fun SearchScreen() {
+fun UpcomingScreen() {
     Box(modifier = Modifier
         .fillMaxSize()
-        .background(color = Color.DarkGray),
+        .background(color = Color.Magenta),
         contentAlignment = Alignment.Center
     ){
         Text(
-            text = "Search",
+            text = "Upcoming",
             fontWeight = FontWeight.Bold,
             color = Color.White,
             fontSize = MaterialTheme.typography.headlineLarge.fontSize
@@ -30,6 +30,6 @@ fun SearchScreen() {
 
 @Preview
 @Composable
-fun SearchScreenPreview() {
-    SearchScreen()
+fun UpcomingScreenPreview() {
+    UpcomingScreen()
 }
