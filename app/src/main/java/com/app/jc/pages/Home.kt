@@ -26,9 +26,9 @@ import com.app.jc.section.header.CategorySection
 import com.app.jc.section.header.HeaderSection
 import com.app.jc.section.home.MoviesSection
 
-//@Preview
+@Preview
 @Composable
-fun HomeScreen(moviesList: List<MoviesItem>) {
+fun HomeScreen(moviesList: List<MoviesItem> = listOf()) {
     Column(modifier = Modifier
         .fillMaxSize()
         .padding(

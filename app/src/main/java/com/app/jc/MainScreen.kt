@@ -15,9 +15,9 @@ import com.app.jc.data.model.MoviesItem
 import com.app.jc.navbar.BottomNavigationBar
 import com.app.jc.navbar.BottomNavGraph
 
-//@Preview
+@Preview
 @Composable
-fun MainScreen(moviesList: List<MoviesItem>) {
+fun MainScreen(moviesList: List<MoviesItem> = listOf()) {
     val navController = rememberNavController()
     val navBackStackEntry by navController.currentBackStackEntryAsState()
     val currentDestination = navBackStackEntry?.destination
