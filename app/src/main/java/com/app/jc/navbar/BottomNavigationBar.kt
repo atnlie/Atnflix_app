@@ -43,7 +43,7 @@ fun BottomNavigationBar() {
         ) {
             itemsBar.forEachIndexed { index, item ->
                 NavigationBarItem(
-                    selected = index == 1,
+                    selected = index == 0,
                     onClick = { },
                     icon = {
                         Icon(

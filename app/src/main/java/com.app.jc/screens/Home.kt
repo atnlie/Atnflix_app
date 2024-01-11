@@ -1,35 +1,25 @@
 package com.app.jc.screens
 
-import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Text
+import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
-
-@Composable
-fun HomeScreen() {
-    Box(modifier = Modifier
-        .fillMaxSize()
-        .background(color = Color.Red),
-        contentAlignment = Alignment.Center
-        ){
-        Text(
-            text = "Home",
-            fontWeight = FontWeight.Bold,
-            color = Color.White,
-            fontSize = MaterialTheme.typography.headlineLarge.fontSize
-            )
-    }
-}
+import androidx.compose.ui.unit.dp
+import com.app.jc.section.header.CategorySection
+import com.app.jc.section.header.HeaderSection
 
 @Preview
 @Composable
-fun HomeScreenPreview() {
-    HomeScreen()
+fun HomeScreen() {
+    Column(modifier = Modifier
+        .fillMaxSize()
+        .padding(
+            horizontal = 2.dp
+        )
+    ) {
+        HeaderSection(title = "For Atnlie")
+        CategorySection()
+    }
 }
