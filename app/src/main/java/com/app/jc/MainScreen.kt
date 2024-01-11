@@ -11,12 +11,13 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import com.app.jc.data.model.MoviesItem
 import com.app.jc.navbar.BottomNavigationBar
 import com.app.jc.navbar.BottomNavGraph
 
-@Preview
+//@Preview
 @Composable
-fun MainScreen() {
+fun MainScreen(moviesList: List<MoviesItem>) {
     val navController = rememberNavController()
     val navBackStackEntry by navController.currentBackStackEntryAsState()
     val currentDestination = navBackStackEntry?.destination
@@ -31,9 +32,9 @@ fun MainScreen() {
         Column (
             modifier = Modifier
                 .fillMaxSize()
-                .padding(paddingValues)
+                //.padding(paddingValues)
         ) {
-            BottomNavGraph(navController = navController, pv = paddingValues)
+            BottomNavGraph(navController = navController, pv = paddingValues, mv = moviesList)
         }
     }
 }

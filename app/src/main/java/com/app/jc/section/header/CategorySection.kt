@@ -18,7 +18,7 @@ import androidx.compose.ui.unit.dp
 @Preview
 @Composable
 fun CategorySection() {
-    Row (modifier = Modifier.padding(horizontal = 8.dp)) {
+    Row (modifier = Modifier.padding(horizontal = 8.dp, vertical = 8.dp)) {
         OutlinedButton(
             onClick = { /*TODO*/ },
             border = BorderStroke(

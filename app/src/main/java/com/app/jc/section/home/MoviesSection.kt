@@ -62,11 +62,17 @@ fun MoviesSection(movie: MoviesItem) {
         }
         
         Spacer(modifier = Modifier.height(6.dp))
+        Text(
+            text = movie?.details?.itemSummary?.title ?: "-",
+            modifier = Modifier.padding(horizontal = 16.dp),
+            fontSize = 17.sp,
+            fontWeight = FontWeight.Bold
+        )
 
         Text(
             text = movie?.details?.contextualSynopsis?.text ?: "--",
-            modifier = Modifier.padding(horizontal = 16.dp),
-            fontSize = 17.sp,
+            modifier = Modifier.padding(horizontal = 16.dp, vertical = 10.dp),
+            fontSize = 13.sp,
             fontWeight = FontWeight.Bold
         )
 
@@ -75,7 +81,7 @@ fun MoviesSection(movie: MoviesItem) {
         Text(
             modifier = Modifier.padding(horizontal = 16.dp, vertical = 10.dp),
             text = "Rating: ${movie?.details?.maturity?.rating?.value ?: "-"}",
-            fontSize = 13.sp,
+            fontSize = 17.sp,
         )
         Text(
             modifier = Modifier.padding(horizontal = 16.dp, vertical = 10.dp),
