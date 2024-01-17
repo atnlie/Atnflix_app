@@ -3,7 +3,7 @@ package com.app.jc.presentations
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.app.jc.data.Result
-import com.app.jc.data.model.MoviesItem
+import com.app.jc.data.model.rapidapi.MoviesItem
 import com.app.jc.data.repositories.MoviesRepository
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.MutableStateFlow

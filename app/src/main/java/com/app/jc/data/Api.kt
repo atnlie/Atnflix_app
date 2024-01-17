@@ -1,6 +1,6 @@
 package com.app.jc.data
 
-import com.app.jc.data.model.Movies
+import com.app.jc.data.model.rapidapi.Movies
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query

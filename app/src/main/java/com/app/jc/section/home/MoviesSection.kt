@@ -24,7 +24,7 @@ import coil.compose.AsyncImagePainter
 import coil.compose.rememberAsyncImagePainter
 import coil.request.ImageRequest
 import coil.size.Size
-import com.app.jc.data.model.MoviesItem
+import com.app.jc.data.model.rapidapi.MoviesItem
 
 @Composable
 fun MoviesSection(movie: MoviesItem) {

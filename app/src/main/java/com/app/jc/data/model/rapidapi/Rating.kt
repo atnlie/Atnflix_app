@@ -1,4 +1,4 @@
-package com.app.jc.data.model
+package com.app.jc.data.model.rapidapi
 
 data class Rating(
     val board: String,

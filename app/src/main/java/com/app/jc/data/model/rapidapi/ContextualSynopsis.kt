@@ -1,4 +1,4 @@
-package com.app.jc.data.model
+package com.app.jc.data.model.rapidapi
 
 data class ContextualSynopsis(
     val evidenceKey: String,

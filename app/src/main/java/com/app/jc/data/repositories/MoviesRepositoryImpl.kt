@@ -2,7 +2,7 @@ package com.app.jc.data.repositories
 
 import com.app.jc.data.Api
 import com.app.jc.data.Result
-import com.app.jc.data.model.MoviesItem
+import com.app.jc.data.model.rapidapi.MoviesItem
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import retrofit2.HttpException

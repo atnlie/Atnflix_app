@@ -1,4 +1,4 @@
-package com.app.jc.data.model
+package com.app.jc.data.model.rapidapi
 
 data class Queue(
     val available: Boolean,

@@ -1,6 +1,6 @@
 package com.app.jc.data.model.tmdb
 
-data class Tmdb_Movie(
+data class TmdbMovie(
     val adult: Boolean,
     val backdrop_path: String,
     val genre_ids: List<Int>,

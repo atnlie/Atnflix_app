@@ -11,6 +11,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
+import com.app.jc.section.cards.medium_card.MediumCard
 
 @Composable
 fun SearchScreen() {
@@ -19,12 +20,13 @@ fun SearchScreen() {
         .background(color = Color.DarkGray),
         contentAlignment = Alignment.Center
     ){
-        Text(
-            text = "Search",
-            fontWeight = FontWeight.Bold,
-            color = Color.White,
-            fontSize = MaterialTheme.typography.headlineLarge.fontSize
-        )
+//        Text(
+//            text = "Search",
+//            fontWeight = FontWeight.Bold,
+//            color = Color.White,
+//            fontSize = MaterialTheme.typography.headlineLarge.fontSize
+//        )
+        MediumCard()
     }
 }
 

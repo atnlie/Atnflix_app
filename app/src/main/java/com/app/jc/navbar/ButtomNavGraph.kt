@@ -7,7 +7,7 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.app.jc.data.model.MoviesItem
+import com.app.jc.data.model.rapidapi.MoviesItem
 import com.app.jc.pages.HomeScreen
 import com.app.jc.pages.SearchScreen
 import com.app.jc.pages.UpcomingScreen

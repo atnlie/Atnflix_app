@@ -14,6 +14,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 
 @Preview
 @Composable
@@ -24,11 +25,12 @@ fun CategorySection() {
             border = BorderStroke(
                 width = 1.dp,
                 color = Color.White
-            )
+            ),
         ) {
             Text(
                 text = "TV Shows",
                 color = Color.White,
+                fontSize = 12.sp
             )
         }
         Spacer(modifier = Modifier.padding(5.dp))
@@ -41,7 +43,8 @@ fun CategorySection() {
         ) {
             Text(
                 text = "Movies",
-                color = Color.White
+                color = Color.White,
+                fontSize = 12.sp
             )
         }
         Spacer(modifier = Modifier.padding(5.dp))
@@ -55,6 +58,7 @@ fun CategorySection() {
             Text(
                 text = "Categories",
                 color = Color.White,
+                fontSize = 12.sp,
                 modifier = Modifier.padding(end = 2.dp)
             )
             Icon(
