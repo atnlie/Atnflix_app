@@ -18,6 +18,8 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.compose.rememberNavController
+import com.app.jc.app_nav_bar.RootNavGraph
 import com.app.jc.data.di.JCInstance
 import com.app.jc.data.repositories.MoviesRepositoryImpl
 import com.app.jc.presentations.MoviesViewModel
@@ -64,7 +66,7 @@ class MainActivity : ComponentActivity() {
 //                    }
 
 //                    MainScreen(moviesList)
-                    MainScreen()
+                    RootNavGraph(navController = rememberNavController())
                 }
             }
         }
