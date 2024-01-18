@@ -31,11 +31,17 @@ import androidx.compose.material3.IconButtonDefaults
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
@@ -45,14 +51,21 @@ import androidx.navigation.NavController
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import coil.size.Scale
+import com.app.jc.R
 import com.app.jc.data.enums.EnumDirection
+import com.app.jc.data.model.movies.ImageWithText
 import com.app.jc.section.cards.audiovideo.AudioVideoCard
+import com.app.jc.section.cards.grids_card.GridCard
+import com.app.jc.section.tabmoreinfo.TabMoreInfoCard
 
 @Preview
 @Composable
 fun MovieDetail(
     goBack: () -> Boolean = { false }
 ) {
+    var selectedTabIndex by remember {
+        mutableStateOf(0)
+    }
     val poster =  "https://image.tmdb.org/t/p/w780/f1AQhx6ZfGhPZFTVKgxG91PhEYc.jpg"
     Box(modifier = Modifier
         .padding(top = 5.dp)
@@ -60,6 +73,7 @@ fun MovieDetail(
     ) {
         Column (
             modifier = Modifier
+                .verticalScroll(rememberScrollState())
         ) {
             Box(
                 modifier = Modifier
@@ -228,8 +242,34 @@ fun MovieDetail(
                             maxLines = 1
                         )
                     }
-
                 }
+                Spacer(modifier = Modifier.padding(vertical = 6.dp))
+                TabMoreInfoCard(
+                    tabsList =  listOf(
+                        ImageWithText(
+                            text = "More Like This",
+                            image = painterResource(id = R.drawable.anton)
+                        ),
+                        ImageWithText(
+                            text = "Collection",
+                            image = painterResource(id = R.drawable.atn)
+                        ),
+                        ImageWithText(
+                            text = "Episodes",
+                            image = painterResource(id = R.drawable.atn)
+                        )
+                    ),
+                    onTabSelected =  {
+                        selectedTabIndex = it
+                        when(selectedTabIndex) {
+                            0 -> println("NOLLLLLL")
+                            1 -> println("SATUUU")
+                            2 -> println("DUA")
+                            3 -> println("Tiga")
+                        }
+                    }
+                )
+                Spacer(modifier = Modifier.padding(vertical = 200.dp))
             }
         }
     }
