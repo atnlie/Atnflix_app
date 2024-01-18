@@ -7,6 +7,7 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import com.app.jc.app_nav_bar.BottomNavBarScreen
 import com.app.jc.data.model.rapidapi.MoviesItem
 import com.app.jc.pages.HomeScreen
 import com.app.jc.pages.SearchScreen
@@ -20,7 +21,12 @@ fun BottomNavGraph(navController: NavHostController, pv: PaddingValues, mv: List
         modifier = Modifier.padding(paddingValues = pv)
     ) {
         composable(route  = BottomNavBarScreen.Home.route) {
-            HomeScreen(mv)
+//            HomeScreen(mv)
+            HomeScreen(
+                goToDetailsScreen = {
+                    // do nothing
+                }
+            )
         }
         composable(route = BottomNavBarScreen.Search.route) {
             SearchScreen()

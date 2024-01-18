@@ -2,6 +2,7 @@ package com.app.jc.section.cards.carousel
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -27,7 +28,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
@@ -35,10 +35,12 @@ import coil.request.ImageRequest
 import coil.size.Scale
 
 @OptIn(ExperimentalFoundationApi::class)
-@Preview
+//@Preview
 @Composable
-fun CarouselCard(sliderList: List<String> = listOf()) {
-
+fun CarouselCard(
+    sliderList: List<String> = listOf(),
+    goToDetail: () -> Unit?
+    ) {
     // TODO: get data from sliderlist
     var categories: List<String> = listOf(
         "Epic", "Action", "Violence", "Adult"
@@ -64,7 +66,10 @@ fun CarouselCard(sliderList: List<String> = listOf()) {
             val boxHeight = 500
             Box (
                 modifier = Modifier
-                    .height(boxHeight.dp),
+                    .height(boxHeight.dp)
+                    .clickable {
+                        goToDetail()
+                    },
             ) {
                 AsyncImage(
                     model = ImageRequest.Builder(LocalContext.current)
