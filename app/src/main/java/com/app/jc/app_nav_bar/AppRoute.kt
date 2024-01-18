@@ -1,8 +1,4 @@
-package com.app.jc.navigation
-
-import com.app.jc.app_nav_bar.ChildNavigationScreen
-import com.app.jc.app_nav_bar.MovieNavigationScreen
-import com.app.jc.app_nav_bar.RootNavigationScreen
+package com.app.jc.app_nav_bar
 
 sealed class RootScreen(val route: String) {
     object Home : RootScreen(RootNavigationScreen.HomeRootRoute)

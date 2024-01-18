@@ -8,7 +8,7 @@ import androidx.compose.ui.graphics.vector.ImageVector
 
 
 sealed class BottomNavBarScreen(val route: String, val icon: ImageVector, val label: String) {
-    object Home: BottomNavBarScreen("home_root", Icons.Default.Home, "Home")
-    object Search: BottomNavBarScreen("search_root", Icons.Default.Search, "Search")
-    object Upcoming: BottomNavBarScreen("upcoming_root", Icons.Default.ShoppingCart, "Upcoming")
+    object Home: BottomNavBarScreen(RootNavigationScreen.HomeRootRoute, Icons.Default.Home, "Home")
+    object Search: BottomNavBarScreen(RootNavigationScreen.SearchRootRoute, Icons.Default.Search, "Search")
+    object Upcoming: BottomNavBarScreen(RootNavigationScreen.UpcomingRootRoute, Icons.Default.ShoppingCart, "Upcoming")
 }

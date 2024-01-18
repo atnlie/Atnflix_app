@@ -16,7 +16,6 @@ fun RootNavGraph(navController: NavHostController) {
     ) {
         composable(route = RootGraph.HOME) {
             MainScreen()
-//            HomeScreen()
             // add more route e.g. auth (login, register, reset pass, etc.)
         }
     }

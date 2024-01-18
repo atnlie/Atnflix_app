@@ -9,7 +9,7 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.app.jc.data.EnumCard
+import com.app.jc.data.enums.EnumCard
 import com.app.jc.section.cards.carousel.CarouselCard
 import com.app.jc.section.cards.horizontal.HorizontalCard
 import com.app.jc.section.header.CategorySection

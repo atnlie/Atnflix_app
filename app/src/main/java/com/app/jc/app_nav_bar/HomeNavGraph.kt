@@ -9,7 +9,6 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.app.jc.data.BottomNavigation
-import com.app.jc.navigation.ChildScreen
 import com.app.jc.pages.HomeScreen
 import com.app.jc.pages.SearchScreen
 import com.app.jc.pages.UpcomingScreen
