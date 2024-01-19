@@ -1,17 +1,22 @@
 package com.app.jc.pages
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.lazy.grid.GridCells
+import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
@@ -38,8 +43,10 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.painter.Painter
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
@@ -56,6 +63,7 @@ import com.app.jc.data.enums.EnumDirection
 import com.app.jc.data.model.movies.ImageWithText
 import com.app.jc.section.cards.audiovideo.AudioVideoCard
 import com.app.jc.section.cards.grids_card.GridCard
+import com.app.jc.section.cards.movie_card.MovieCardList
 import com.app.jc.section.tabmoreinfo.TabMoreInfoCard
 
 @Preview
@@ -243,7 +251,7 @@ fun MovieDetail(
                         )
                     }
                 }
-                Spacer(modifier = Modifier.padding(vertical = 6.dp))
+                Spacer(modifier = Modifier.padding(top = 20.dp))
                 TabMoreInfoCard(
                     tabsList =  listOf(
                         ImageWithText(
@@ -259,17 +267,55 @@ fun MovieDetail(
                             image = painterResource(id = R.drawable.atn)
                         )
                     ),
-                    onTabSelected =  {
-                        selectedTabIndex = it
-                        when(selectedTabIndex) {
-                            0 -> println("NOLLLLLL")
-                            1 -> println("SATUUU")
-                            2 -> println("DUA")
-                            3 -> println("Tiga")
-                        }
+                ) {
+                    selectedTabIndex = it
+                }
+                when(selectedTabIndex) {
+                    0 -> Box(
+                        modifier = Modifier
+                        .padding(top = 14.dp)
+                    ) {
+                        GridCard(
+                            movieInfo = listOf(
+                                "https://image.tmdb.org/t/p/w342/otjBqNDpZ3C9mzfDOI4kaiib3Qd.jpg",
+                                "https://image.tmdb.org/t/p/w342/scFc8RD4sFxB2x0eIOaymphMnYh.jpg",
+                                "https://image.tmdb.org/t/p/w342/ofTnrgEwtPILNfjwk0FAx3bfwZ6.jpg",
+                                "https://image.tmdb.org/t/p/w342/5VJSIAhSn4qUsg5nOj4MhQhF5wQ.jpg",
+                                "https://image.tmdb.org/t/p/w342/scFc8RD4sFxB2x0eIOaymphMnYh.jpg",
+                                "https://image.tmdb.org/t/p/w342/ofTnrgEwtPILNfjwk0FAx3bfwZ6.jpg",
+                            )
+                        )
                     }
-                )
-                Spacer(modifier = Modifier.padding(vertical = 200.dp))
+                    1 ->  Box(
+                        modifier = Modifier
+                            .padding(top = 14.dp)
+                    ) {
+                        GridCard(
+                            movieInfo = listOf(
+                                "https://image.tmdb.org/t/p/w342/ofTnrgEwtPILNfjwk0FAx3bfwZ6.jpg",
+                                "https://image.tmdb.org/t/p/w342/5VJSIAhSn4qUsg5nOj4MhQhF5wQ.jpg",
+                                "https://image.tmdb.org/t/p/w342/otjBqNDpZ3C9mzfDOI4kaiib3Qd.jpg",
+                                "https://image.tmdb.org/t/p/w342/ofTnrgEwtPILNfjwk0FAx3bfwZ6.jpg",
+                                "https://image.tmdb.org/t/p/w342/5VJSIAhSn4qUsg5nOj4MhQhF5wQ.jpg",
+                                "https://image.tmdb.org/t/p/w342/otjBqNDpZ3C9mzfDOI4kaiib3Qd.jpg",
+                                "https://image.tmdb.org/t/p/w342/ofTnrgEwtPILNfjwk0FAx3bfwZ6.jpg",
+                                "https://image.tmdb.org/t/p/w342/5VJSIAhSn4qUsg5nOj4MhQhF5wQ.jpg",
+                                "https://image.tmdb.org/t/p/w342/otjBqNDpZ3C9mzfDOI4kaiib3Qd.jpg",
+                                "https://image.tmdb.org/t/p/w342/ofTnrgEwtPILNfjwk0FAx3bfwZ6.jpg",
+                                "https://image.tmdb.org/t/p/w342/5VJSIAhSn4qUsg5nOj4MhQhF5wQ.jpg",
+                                "https://image.tmdb.org/t/p/w342/otjBqNDpZ3C9mzfDOI4kaiib3Qd.jpg"
+                            )
+                        )
+                    }
+                    2 ->  Box(
+                        modifier = Modifier
+                            .padding(top = 14.dp)
+                    ) {
+                        MovieCardList()
+                    }
+                }
+                Spacer(modifier = Modifier.padding(vertical = 10.dp))
+
             }
         }
     }

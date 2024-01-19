@@ -56,8 +56,7 @@ fun SmallCard() {
                     .padding(horizontal = 5.dp)
                     .height(120.dp)
                     .width(80.dp)
-                    .clip(shape = RoundedCornerShape(5.dp))
-                ,
+                    .clip(shape = RoundedCornerShape(5.dp)),
                 horizontalArrangement = Arrangement.Center,
                 verticalAlignment = Alignment.CenterVertically
             ) {

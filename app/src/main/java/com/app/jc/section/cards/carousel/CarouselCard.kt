@@ -81,7 +81,6 @@ fun CarouselCard(
                     alignment = Alignment.Center,
                     modifier = Modifier.fillMaxWidth()
                 )
-
                 Box (
                     modifier = Modifier
                         .fillMaxWidth()
